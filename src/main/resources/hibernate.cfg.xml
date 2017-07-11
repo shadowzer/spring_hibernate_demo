@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.connection.provider_class">com.zaxxer.hikari.hibernate.HikariConnectionProvider</property>
+    <property name="hibernate.hikari.dataSourceClassName">oracle.jdbc.pool.OracleDataSource</property>
+    <property name="hibernate.hikari.dataSource.url">jdbc:oracle:thin:@//localhost:1521/XE</property>
+    <property name="hibernate.hikari.dataSource.user">SHAD</property>
+    <property name="hibernate.hikari.dataSource.password">rvvxx9ut</property>
+
+    <!--<property name="connection.url">jdbc:oracle:thin:@//localhost:1521/XE</property>
+    <property name="connection.driver_class">oracle.jdbc.OracleDriver</property>-->
+    <mapping class="com.example.demo.hibernate.entity.ChesEntity"/>
+
+    <!--<property name="connection.url"/>
+    <property name="connection.driver_class"/>
+    <property name="connection.username"/>
+    <property name="connection.password"/>-->
+    <!-- DB schema will be updated if needed -->
+    <!-- <property name="hbm2ddl.auto">update</property> -->
+  </session-factory>
+</hibernate-configuration>
